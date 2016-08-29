@@ -9,7 +9,7 @@ films = [{title:"The Godmother", description: "The life and times of Grace Hoppe
 
 Film.create!(films)
 
-folks = [{username: "aoscott", password: "password", email: "aoscott@dbc.com", reviewer: true}, {username: "aoscott", password: "password", email: "aoscott@dbc.com", reviewer: true}, {username: "janetmaslin", password: "password", email: "jmaslin@dbc.com", reviewer: true}, {username: "emitchell", password: "password", email: "emitchell@dbc.com", reviewer: true}, {username: "aoscott", password: "password", email: "aoscott@dbc.com", reviewer: true}, {username: "joemorgenstern", password: "password", email: "jmoe@dbc.com", reviewer: true}];
+folks = [{username: "aoscott", password: "password", email: "aoscott@dbc.com", reviewer: true}, {username: "janetmaslin", password: "password", email: "jmaslin@dbc.com", reviewer: true}, {username: "emitchell", password: "password", email: "emitchell@dbc.com", reviewer: true}, {username: "joemorgenstern", password: "password", email: "jmoe@dbc.com", reviewer: true}];
 
 Person.create!(folks)
 
@@ -17,3 +17,11 @@ users = [{username: "EricSnodgrass", password: "password", email: "eric@dbc.com"
 {username: "Inmate#234234", password: "password", email: "debtrow@dbc.com", reviewer:false}, {username: "TimAbernathy", password: "password", email: "tim@dbc.com", reviewer:false}, {username: "SusanaDolomitz", password: "password", email: "susana@dbc.com", reviewer:false}, {username: "JohnDKatherineTMacArthur", password: "password", email: "jdkt@dbc.com", reviewer:false}]
 
 Person.create!(users)
+
+categories = [{name: "Horror"}, {name: "Comedy"}, {name: "Drama"}, {name: "Romantic Comedy"}, {name: "Action"}, {name: "Documentary"}]
+
+Category.create!(categories)
+
+reviews = [{reviewer_id:1 text:"A powerful film, a testament to the human spirit, a tour de force. You simply must see this film. It will change your life forever." film_id:1 rating:4}, {reviewer_id:2 text:"This movie is by far the best of the Bourne franchise.  Here we the amnesiac superagent at his best: having to present his dissertation to a room full of skeptic academic advisors. Can Bourne get out of this one?  OR is this where the legend dies?" film_id:2 rating:3 }, {reviewer_id:4 text:"Grace Hopper is a bad mamajama.  She is the bee's knees. This movie is a revelation, a bombshell of historicity. Find out why they called this admiral 'Amazing Grace.'" film_id:1 rating:4}, {reviewer_id:3 text:"A sorry excuse of a film. This is stale Hollywood tripe, unworthy of our time. Its female characters are underdeveloped and uninteresting, its plot predictable and its jokes flat. It should be burned in its entirety." film_id:3 rating:1 }, {reviewer_id:3 text:"Shocking, scary, creepy. This movie gave me the willies" film_id:4 rating:3 }, {reviewer_id:1 text:"I fell asleep during this movie. I forgot what it was about. I hope my boss doesn/'t read this or else I will get fired." film_id:5 rating:2 }]
+
+Review.create!(reviews)
