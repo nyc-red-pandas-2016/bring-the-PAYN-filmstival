@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'App#index'
+  # root 'App#index'
   resources :users, :films, :reviews, :votes, :comments, :categories
 
   devise_for :users
