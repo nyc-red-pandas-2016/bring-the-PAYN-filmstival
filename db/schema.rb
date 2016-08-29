@@ -76,8 +76,11 @@ ActiveRecord::Schema.define(version: 20160829160323) do
     t.integer  "votable_id",   null: false
     t.string   "votable_type", null: false
     t.integer  "person_id",    null: false
+    t.integer  "point_value",  null: false
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
   end
 
 end
+
+
