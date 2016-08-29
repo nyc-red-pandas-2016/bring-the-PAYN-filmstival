@@ -1,5 +1,6 @@
 class MoviesList extends React.Component{
 constructor(){
+  super()
   this.selectByCategory() = this.selectByCategory().bind(this)
 }
 selectByCategory(film){
@@ -13,7 +14,9 @@ selectByCategory(film){
     return(
         <div className="moviesList">
           {
-            this.props.
+            filmList.map(function(film, i){
+              <MovieItem data={film} key={i}/>
+            })
           }
         </div>
     )
