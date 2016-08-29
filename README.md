@@ -22,3 +22,50 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+
+
+<App />
+  <Navbar />
+    -header
+    <SearchBar />
+    <LoginStuff />
+  <Featured />
+    -Random movies
+  <CategoriesBar />
+    <Category />
+    <Sort />
+  <MoviesList />
+    <Movie />
+      <Reviews />(for selected movie)
+        <Review />
+          -review content
+          <Vote />
+        <Comments />
+          <Comment />
+            -content
+          <Vote />
+           -vote button
+  <Reviews /> (sorted by date & category)
+    <Review />
+      -review content
+      <Vote />
+        -vote button
+    <Comments />
+      <Comment />
+        -content
+      <Vote />
+
+
+      (***Stretch goals. events put in as seed data***)
+  <Events /> (movies sorted by event date)
+    <Movie />
+      <Reviews />(for selected movie)
+        <Review />
+          -review content
+          <Vote />
+        <Comments />
+          <Comment />
+            -content
+          <Vote />
+           -vote button
