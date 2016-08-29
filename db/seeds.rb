@@ -11,12 +11,14 @@ Film.create!(films)
 
 folks = [{username: "aoscott", password: "password", email: "aoscott@dbc.com", reviewer: true}, {username: "janetmaslin", password: "password", email: "jmaslin@dbc.com", reviewer: true}, {username: "emitchell", password: "password", email: "emitchell@dbc.com", reviewer: true}, {username: "joemorgenstern", password: "password", email: "jmoe@dbc.com", reviewer: true}];
 
+
 Person.create!(folks)
 
 users = [{username: "EricSnodgrass", password: "password", email: "eric@dbc.com", reviewer:false}, {username: "SakeenaEdmonton", password: "password", email: "sakeena@dbc.com", reviewer:false}, {username: "VincentStMallor", password: "password", email: "vincent@dbc.com", reviewer:false}, {username: "OguchiOnyewu", password: "password", email: "guchi@dbc.com", reviewer:false}, {username: "CharimanMao", password: "password", email: "mao@dbc.com", reviewer:false},
 {username: "Inmate#234234", password: "password", email: "debtrow@dbc.com", reviewer:false}, {username: "TimAbernathy", password: "password", email: "tim@dbc.com", reviewer:false}, {username: "SusanaDolomitz", password: "password", email: "susana@dbc.com", reviewer:false}, {username: "JohnDKatherineTMacArthur", password: "password", email: "jdkt@dbc.com", reviewer:false}]
 
 Person.create!(users)
+<<<<<<< HEAD
 
 categories = [{name: "Horror"}, {name: "Comedy"}, {name: "Drama"}, {name: "Romantic Comedy"}, {name: "Action"}, {name: "Documentary"}]
 
