@@ -31,11 +31,12 @@ ActiveRecord::Schema.define(version: 20160829160323) do
   end
 
   create_table "comments", force: :cascade do |t|
-    t.integer  "review_id",  null: false
-    t.integer  "person_id",  null: false
-    t.text     "text",       null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "commentable_id",   null: false
+    t.string   "commentable_type", null: false
+    t.integer  "person_id",        null: false
+    t.text     "text",             null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
   end
 
   create_table "events", force: :cascade do |t|
