@@ -28,3 +28,5 @@ reviews = [{reviewer_id:1 text:"A powerful film, a testament to the human spirit
 Review.create!(reviews)
 
 genres = [{category: 6, film: 1}, {category:5 film:2}, {category:4 film:3 }, {category:1 film:4 }, {category:3 film:5}, {category:5 film:6 }, {category:2 film:7 },{category:1 film:8 }, {category:3 film:9 } ]
+
+CategoryFilm.create!(genres)
