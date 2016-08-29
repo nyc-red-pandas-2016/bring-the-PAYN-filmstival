@@ -27,6 +27,7 @@ reviews = [{reviewer_id:1, text:"A powerful film, a testament to the human spiri
 
 Review.create!(reviews)
 
-genres = [{category: 6, film: 1}, {category:5, film:2}, {category:4, film:3 }, {category:1, film:4 }, {category:3, film:5}, {category:5, film:6 }, {category:2, film:7 },{category:1, film:8 }, {category:3, film:9 } ]
+genres = [{category_id: 6, film_id: 1}, {category_id:5, film_id:2}, {category_id:4, film_id:3 }, {category_id:1, film_id:4 }, {category_id:3, film_id:5}, {category_id:5, film_id:6 }, {category_id:2, film_id:7 },{category_id:1, film_id:8 }, {category_id:3, film_id:9 } ]
 #
-# CategoryFilm.create!(genres)
+
+CategoryFilm.create!(genres)
