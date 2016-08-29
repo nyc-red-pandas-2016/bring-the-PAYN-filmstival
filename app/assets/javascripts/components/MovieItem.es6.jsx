@@ -7,7 +7,7 @@ class MovieItem extends React.Component{
     return(
       <div className="theMovie">
         {
-          
+          <h4>{this.props.data.title}</h4>
         }
       </div>
 
