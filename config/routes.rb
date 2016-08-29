@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
-  resources :persons, :films, :reviews, :votes, :comments, :categories
+  resources :users, :films, :reviews, :votes, :comments, :categories
 
+  devise_for :users
+  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

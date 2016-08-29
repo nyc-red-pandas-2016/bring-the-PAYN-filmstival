@@ -1,7 +1,7 @@
-class Registration extends React.Component {
-  render() {
-    return (
-      
-    )
-  }
-}
+// class Registration extends React.Component {
+//   render() {
+//     return (
+//
+//     )
+//   }
+// }
