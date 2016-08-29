@@ -25,7 +25,7 @@ Things you may want to cover:
 
 
 
-<App />
+[_*_]<App /> 
   <Navbar />
     -header
     <SearchBar />
