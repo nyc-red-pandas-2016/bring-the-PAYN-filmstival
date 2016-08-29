@@ -18,7 +18,6 @@ users = [{username: "EricSnodgrass", password: "password", email: "eric@dbc.com"
 {username: "Inmate#234234", password: "password", email: "debtrow@dbc.com", reviewer:false}, {username: "TimAbernathy", password: "password", email: "tim@dbc.com", reviewer:false}, {username: "SusanaDolomitz", password: "password", email: "susana@dbc.com", reviewer:false}, {username: "JohnDKatherineTMacArthur", password: "password", email: "jdkt@dbc.com", reviewer:false}]
 
 Person.create!(users)
-<<<<<<< HEAD
 
 categories = [{name: "Horror"}, {name: "Comedy"}, {name: "Drama"}, {name: "Romantic Comedy"}, {name: "Action"}, {name: "Documentary"}]
 
@@ -28,4 +27,6 @@ reviews = [{reviewer_id:1 text:"A powerful film, a testament to the human spirit
 
 Review.create!(reviews)
 
-genres = [{category: 6, film: 1}, {category:5 film:2}, {category:4 film:3 }, {category:1 film:4 }, {category:3 film:5}, {category: film: }]
+genres = [{category: 6, film: 1}, {category:5 film:2}, {category:4 film:3 }, {category:1 film:4 }, {category:3 film:5}, {category:5 film:6 }, {category:2 film:7 },{category:1 film:8 }, {category:3 film:9 } ]
+
+CategoryFilm.create!(genres)
