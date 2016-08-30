@@ -14,7 +14,27 @@
  *= require_self
  */
 
+/*body {
 
+  background-size: cover;
+  position: relative;
+}*/
+.showFilm {
+  background-size: cover;
+  background-image: url('/assets/logo-cell.png');
+}
+
+.logo {
+  float: left;
+  position: relative;
+}
+
+.img-responsive2 {
+  height: 40px;
+  max-width: 50px;
+  background-color: black;
+  padding: 5px;
+}
 
 .navbar ul {
   list-style-type: none;
@@ -25,7 +45,7 @@
 }
 
 .navbar li {
-  display: inline;
+  display: inline-block;
   float: right;
   font-family: "Times New Roman";
 }
