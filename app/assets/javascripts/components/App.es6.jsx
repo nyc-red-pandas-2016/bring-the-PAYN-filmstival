@@ -3,6 +3,7 @@ class App extends React.Component{
     super();
     this.state = {
       films: [],
+      // dummyfilm: []
       selectedFilm: "",
       reviews: [],
       selectedCategory: ""
