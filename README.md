@@ -24,7 +24,7 @@ Things you may want to cover:
 * ...
 
 
-
+```
 [_*_]<App />
   <Navbar />
     -header
@@ -69,3 +69,4 @@ Things you may want to cover:
             -content
           <Vote />
            -vote button
+```
