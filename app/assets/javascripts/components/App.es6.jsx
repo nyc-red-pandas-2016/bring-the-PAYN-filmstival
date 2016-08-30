@@ -44,7 +44,7 @@ class App extends React.Component{
         <NavBar currentUser={this.props.currentUser}/>
         {/* <Featured /> */}
         <CategoriesBar categories={this.state.allCategories} onUpdate={this.handleSelectCategory}/>
-        <MoviesList filmList={this.state.films} category={this.state.selectedCategory}/>
+        <MoviesList filmList={this.state.films} category={this.state.selectedCategory} currentUser={this.props.currentUser}/>
         {/* {selectedList} */}
       </div>
     )
