@@ -16,7 +16,6 @@ class App extends React.Component{
   }
 
   render(){
-
     // var selectedList;
     // if (sortItem === "Events") {
     //   selectedList = <Events />
@@ -24,20 +23,17 @@ class App extends React.Component{
     // else if (sortItem === "Reviews") {
     //   selectedList = <Reviews />
     // }
-    // else (sortItem === "Movies"){
+    // else {
     //   selectedList = <MoviesList filmList={this.state.films} category={this.state.selectedCategory}/>
     // }
 
-
-
-
-
     return(
       <div className="appMain">
-        {/* <NavBar /> */}
+        <NavBar currentUser={this.props.currentUser}/>
         {/* <Featured /> */}
-        {/* <CategoriesBar /> */}
-        <MoviesList filmList={this.state.films} category={this.state.selectedCategory}/>
+        <CategoriesBar />
+        <MoviesList filmList={this.state.films.films} category={this.state.selectedCategory}/>
+        {/* {selectedList} */}
       </div>
     )
   }
