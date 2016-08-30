@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 20160829212731) do
   create_table "comments", force: :cascade do |t|
     t.integer  "commentable_id",   null: false
     t.string   "commentable_type", null: false
-    t.integer  "person_id",        null: false
+    t.integer  "user_id",          null: false
     t.text     "text",             null: false
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
@@ -52,15 +52,6 @@ ActiveRecord::Schema.define(version: 20160829212731) do
     t.text     "description", null: false
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-  end
-
-  create_table "people", force: :cascade do |t|
-    t.string   "username",                        null: false
-    t.string   "password_digest",                 null: false
-    t.string   "email",                           null: false
-    t.boolean  "reviewer",        default: false
-    t.datetime "created_at",                      null: false
-    t.datetime "updated_at",                      null: false
   end
 
   create_table "reviews", force: :cascade do |t|
@@ -94,7 +85,8 @@ ActiveRecord::Schema.define(version: 20160829212731) do
   create_table "votes", force: :cascade do |t|
     t.integer  "votable_id",   null: false
     t.string   "votable_type", null: false
-    t.integer  "person_id",    null: false
+    t.integer  "user_id",      null: false
+    t.integer  "point_value",  null: false
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
   end

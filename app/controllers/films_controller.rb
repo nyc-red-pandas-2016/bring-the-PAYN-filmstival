@@ -5,4 +5,8 @@ class FilmsController < ApplicationController
     render :json => @films
   end
 
+  def rootpath
+    render 'index'
+  end
+
 end

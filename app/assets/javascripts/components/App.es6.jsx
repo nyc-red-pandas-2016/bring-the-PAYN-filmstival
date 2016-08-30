@@ -16,16 +16,17 @@ class App extends React.Component{
   }
 
   render(){
-    var selectedList;
-    if (sortItem === "Events") {
-      selectedList = <Events />
-    }
-    else if (sortItem === "Reviews") {
-      selectedList = <Reviews />
-    }
-    else (sortItem === "Movies"){
-      selectedList = <MoviesList filmList={this.state.films} category={this.state.selectedCategory}/>
-    }
+
+    // var selectedList;
+    // if (sortItem === "Events") {
+    //   selectedList = <Events />
+    // }
+    // else if (sortItem === "Reviews") {
+    //   selectedList = <Reviews />
+    // }
+    // else (sortItem === "Movies"){
+    //   selectedList = <MoviesList filmList={this.state.films} category={this.state.selectedCategory}/>
+    // }
 
 
 
@@ -33,10 +34,10 @@ class App extends React.Component{
 
     return(
       <div className="appMain">
-        <NavBar />
-        <Featured />
-        <CategoriesBar />
-        {selectedList}
+        {/* <NavBar /> */}
+        {/* <Featured /> */}
+        {/* <CategoriesBar /> */}
+        <MoviesList filmList={this.state.films} category={this.state.selectedCategory}/>
       </div>
     )
   }
