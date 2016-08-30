@@ -1,6 +1,24 @@
 class MovieItem extends React.Component{
   constructor(){
-    super()
+    super();
+  }
+
+  voteMovie(event){
+    event.preventDefault();
+    this.props.voteMovie()
+    debugger;
+
+    $.ajax({
+      url: '/votes',
+      method: "Post",
+      data: {
+
+      }
+    }).done((response) => {
+      this.props.onChange(response);
+      $('#voteTally').val();
+    })
+
   }
 
   render(){
@@ -11,18 +29,18 @@ class MovieItem extends React.Component{
 
           <h4>{data.film.title}</h4>
           <p>{data.film.description}</p>
-          {/* {
-            data.reviews.map((review, i) => <Reviews key={i} data={review} />)
-          } */}
-          
-          <h4>{this.props.data.title}</h4>
-          <p>{this.props.data.description}</p>
-        <reviewList {this.props.data.reviews} />
-      </div>
 
+        { this.props.currentUser ?
+          <div>
+            <p id="voteTally">{this.props.data.votes.length} votes</p>
+            <form id="voteForm" onChange={this.voteMovie.bind.this}>
+              <input id="voteButton" type="Submit" value="&uarr;"/>
+            </form>
+          </div>
+          :
+          <p id="voteTally">{this.props.data.votes.length} votes</p>
+        }
+      </div>
     )
   }
-
-
-
 }

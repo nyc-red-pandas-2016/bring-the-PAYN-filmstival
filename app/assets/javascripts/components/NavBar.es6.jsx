@@ -13,14 +13,12 @@ class NavBar extends React.Component{
               </form>
           </li>
           <li><a href='/'>Home</a></li>
-          <SearchBoxView/>
         </ul>
         :
         <ul>
           <li><a href='/users/sign_in'>Sign In</a></li>
           <li><a href='/users/sign_up'>Register</a></li>
           <li><a href='/'>Home</a></li>
-          <SearchBoxView/>
         </ul>
       }
       </nav>

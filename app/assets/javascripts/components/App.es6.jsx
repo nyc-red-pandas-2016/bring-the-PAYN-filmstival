@@ -37,10 +37,14 @@ class App extends React.Component{
 
     return(
       <div className="appMain">
+        {/* <h2 className="logo">
+          <a href="/"><img className="img-responsive2"
+           src="/assets/logo-cell.png"/></a>
+        </h2> */}
         <NavBar currentUser={this.props.currentUser}/>
         {/* <Featured /> */}
         <CategoriesBar categories={this.state.allCategories} onUpdate={this.handleSelectCategory}/>
-        <MoviesList filmList={this.state.films} category={this.state.selectedCategory}/>
+        <MoviesList filmList={this.state.films} category={this.state.selectedCategory} currentUser={this.props.currentUser}/>
         {/* {selectedList} */}
       </div>
     )

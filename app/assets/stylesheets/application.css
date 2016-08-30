@@ -13,6 +13,29 @@
  *= require_tree .
  *= require_self
  */
+
+/*body {
+
+  background-size: cover;
+  position: relative;
+}*/
+.showFilm {
+  background-size: cover;
+  background-image: url('/assets/logo-cell.png');
+}
+
+.logo {
+  float: left;
+  position: relative;
+}
+
+.img-responsive2 {
+  height: 40px;
+  max-width: 50px;
+  background-color: black;
+  padding: 5px;
+}
+
 .navbar ul {
   list-style-type: none;
   margin: 0;
@@ -22,7 +45,7 @@
 }
 
 .navbar li {
-  display: inline;
+  display: inline-block;
   float: right;
   font-family: "Times New Roman";
 }
@@ -53,19 +76,4 @@
 
 #logoutButton:hover {
   background-color: #808080;
-}
-
-#search-form {
-  padding: 10px 12px;
-  height: 25px;
-  width: 30px;
-  border-radius: 3px;
-}
-
-#search-form input[type=text] {
-  background-image: url('../images/search-128.png');
-  background-position: 10px 10px;
-  background-repeat: no-repeat;
-  padding-left: 15px;
-  border-radius: 3px;
 }

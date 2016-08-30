@@ -7,10 +7,10 @@ class Comment extends React.Component {
   render() {
     return (
 
-      <li><{this.props.data}/></li>
+      // <li><{this.props.data}/></li>
       <Vote />
       // Close Return
-    );
+    )
     // Close Render
   }
 // Close Component
