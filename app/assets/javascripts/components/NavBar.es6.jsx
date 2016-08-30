@@ -6,8 +6,12 @@ class NavBar extends React.Component{
       <nav className="navbar">
         { this.props.currentUser ?
         <ul>
-          <li><a href='/users/sign_out'>Log Out</a></li>
-          <li><{this.props.currentUser.username}</li>
+          <li>
+              <form  method="get" action="/users/sign_out">
+                <input id="logoutButton" type="Submit" value="Log Out"/>
+                <input type="hidden" name="_method" value="Delete"/>
+              </form>
+          </li>
           <li><a href='/'>Home</a></li>
           <SearchBoxView/>
         </ul>

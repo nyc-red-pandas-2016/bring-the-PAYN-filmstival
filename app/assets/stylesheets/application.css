@@ -23,14 +23,16 @@
 
 .navbar li {
   display: inline;
-  float: right
+  float: right;
+  font-family: "Times New Roman";
 }
 
 .navbar li a {
   display: block;
   color: white;
   text-align: center;
-  padding: 14px 16px;
+  padding: 16px;
+  font-size: 16px;
   text-decoration: none;
 }
 
@@ -38,10 +40,26 @@
   background-color: #808080;
 }
 
+#logoutButton {
+  font-family: "Times New Roman";
+  font-size: 16px;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px;
+  background: none;
+  border: none;
+}
+
+#logoutButton:hover {
+  background-color: #808080;
+}
+
 #search-form {
   padding: 10px 12px;
   height: 25px;
   width: 30px;
+  border-radius: 3px;
 }
 
 #search-form input[type=text] {
@@ -49,4 +67,5 @@
   background-position: 10px 10px;
   background-repeat: no-repeat;
   padding-left: 15px;
+  border-radius: 3px;
 }
