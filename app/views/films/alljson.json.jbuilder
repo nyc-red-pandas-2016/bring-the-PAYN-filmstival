@@ -17,5 +17,5 @@ json.films @films do |film|
 end
 
 json.category @categories do |category|
-  json.name
+  json.name category.name
 end

@@ -6,14 +6,21 @@ class App extends React.Component{
       // dummyfilm: []
       selectedFilm: "",
       reviews: [],
-      selectedCategory: ""
+      selectedCategory: "",
+      allCategories: []
     }
+    this.handleSelectCategory = this.handleSelectCategory.bind(this)
   }
 
   componentDidMount(){
     fetch("/films")
     .then((response)=> response.json())
-    .then((jsonresponse) => this.setState({films: jsonresponse}))
+    .then((jsonresponse) => this.setState({films: jsonresponse.films , allCategories: jsonresponse.category}))
+  }
+
+
+  handleSelectCategory(newCategory){
+      this.setState({selectedCategory: newCategory})
   }
 
   render(){
@@ -32,8 +39,8 @@ class App extends React.Component{
       <div className="appMain">
         <NavBar currentUser={this.props.currentUser}/>
         {/* <Featured /> */}
-        <CategoriesBar />
-        <MoviesList filmList={this.state.films.films} category={this.state.selectedCategory}/>
+        <CategoriesBar categories={this.state.allCategories} onUpdate={this.handleSelectCategory}/>
+        <MoviesList filmList={this.state.films} category={this.state.selectedCategory}/>
         {/* {selectedList} */}
       </div>
     )
