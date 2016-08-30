@@ -25,7 +25,7 @@ Things you may want to cover:
 
 
 
-<App />
+[_*_]<App />
   <Navbar />
     -header
     <SearchBar />
@@ -35,7 +35,7 @@ Things you may want to cover:
   <CategoriesBar />
     <Category />
     <Sort />
-  <MoviesList />
+  <MoviesList /> (sorted by category)
     <Movie />
       <Reviews />(for selected movie)
         <Review />
