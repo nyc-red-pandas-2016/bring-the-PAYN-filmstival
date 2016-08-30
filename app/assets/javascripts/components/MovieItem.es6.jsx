@@ -1,16 +1,22 @@
 class MovieItem extends React.Component{
   constructor(){
     super();
-    this.voteMovie = this.voteMovie.bind(this)
   }
 
   voteMovie(event){
     event.preventDefault();
     this.props.voteMovie()
+    debugger;
+
     $.ajax({
-      url: '/votes'
-      method:"Post"
-      data: 
+      url: '/votes',
+      method: "Post",
+      data: {
+
+      }
+    }).done((response) => {
+      this.props.onChange(response);
+      $('#voteTally').val();
     })
 
   }
@@ -29,10 +35,19 @@ class MovieItem extends React.Component{
 
           <h4>{this.props.data.title}</h4>
           <p>{this.props.data.description}</p>
-          <p>{this.props.data.votes.length} votes</p>
-          <form id="voteForm" onChange={this.voteMovie}>
-            <input id="voteButton" type="Submit" value="Recommend"/>
-          </form>
+          { this.props.currentUser ?
+            <div>
+            <p id="voteTally">{this.props.data.votes.length} votes</p>
+              <form id="voteForm" onChange={this.voteMovie.bind.this}>
+                <input id="voteButton" type="Submit" value="&uarr;"/>
+                <input type='hidden' name="vote[votable_id]" value={this.props.data.id}/>
+                <input type='hidden' name="vote[votable_type]" value="movie"/>
+                <input type='hidden' name="vote[user_id]" value={current_user.id}/>
+              </form>
+            </div>
+           :
+           <p id="voteTally">{this.props.data.votes.length} votes</p>
+         }
       </div>
     )
   }

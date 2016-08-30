@@ -21,7 +21,7 @@ selectByCategory(film){
         <div className="moviesList">
           {
             filmList.map((film, i) => {
-              return( <MovieItem data={film} key={i} /> )
+              return( <MovieItem currentUser={this.props.currentUser} data={film} key={i} /> )
             })
           }
         </div>
