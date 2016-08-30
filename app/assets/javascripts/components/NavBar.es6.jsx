@@ -7,7 +7,7 @@ class NavBar extends React.Component{
         { this.props.currentUser ?
         <ul>
           <li>
-              <form  method="get" action="/users/sign_out">
+              <form  method="post" action="/users/sign_out">
                 <input id="logoutButton" type="Submit" value="Log Out"/>
                 <input type="hidden" name="_method" value="Delete"/>
               </form>
