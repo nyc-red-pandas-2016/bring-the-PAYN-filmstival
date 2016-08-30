@@ -34,7 +34,7 @@ class App extends React.Component{
 
     return(
       <div className="appMain">
-        {/* <NavBar /> */}
+        <NavBar />
         {/* <Featured /> */}
         {/* <CategoriesBar /> */}
         <MoviesList filmList={this.state.films} category={this.state.selectedCategory}/>
