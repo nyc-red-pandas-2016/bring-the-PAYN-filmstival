@@ -5,7 +5,7 @@ class App extends React.Component{
       films: [],
       selectedFilm: "",
       reviews: [],
-      selectedCategory: "Drama"
+      selectedCategory: ""
     }
   }
 

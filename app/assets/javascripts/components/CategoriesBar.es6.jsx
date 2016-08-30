@@ -1,8 +1,8 @@
 class CategoriesBar extends React.Component {
   render () {
-    reutrn(
+    return(
       <div className="categoriesBar">
-        
+
 
 
       </div>

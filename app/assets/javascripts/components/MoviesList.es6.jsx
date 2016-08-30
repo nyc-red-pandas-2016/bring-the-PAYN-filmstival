@@ -4,7 +4,6 @@ constructor(){
   this.selectByCategory = this.selectByCategory.bind(this)
 }
 selectByCategory(film){
-  debugger
   return film.category.includes(this.props.category)
 }
 
