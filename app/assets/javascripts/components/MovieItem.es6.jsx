@@ -7,6 +7,7 @@ class MovieItem extends React.Component{
     let data = this.props.data
 
     return(
+      <div>
           <h4>{data.film.title}</h4>
           <p>{data.film.description}</p>
         { this.props.currentUser ?
@@ -18,6 +19,7 @@ class MovieItem extends React.Component{
             <p id="voteTally">{this.props.data.votes.length} votes</p>
           </div>
         }
+      </div>
     )
   }
 }

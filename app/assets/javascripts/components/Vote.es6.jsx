@@ -4,27 +4,24 @@ class Vote extends React.Component {
     this.voteUp = this.voteUp.bind(this)
   }
 
-
   voteUp(event){
     event.preventDefault();
+    var voteTotal = $(event.target).parent().siblings();
+    var voteNum = parseInt(voteTotal.find('span').html());
     var formData = $('#voteForm').serialize();
     $.ajax({
       url: '/votes',
       method: "Post",
       data: formData
     })
-
-    var newVotes = parseInt($('#voteTally').html()) + 1
-
-    $('#voteTally').html(newVotes);
-
+    $(voteTotal).html(voteNum++);
   }
 
     render() {
       return (
-        <div>
+        <div className="movieVotes">
           <div className="voteDiv">
-            <p><span id="voteTally">{this.props.voteObject.votes.length}</span> votes</p>
+            <p><span className="voteNum">{this.props.voteObject.votes.length}</span> votes</p>
           </div>
         <div>
            <form id="voteForm" onSubmit={this.voteUp}>
