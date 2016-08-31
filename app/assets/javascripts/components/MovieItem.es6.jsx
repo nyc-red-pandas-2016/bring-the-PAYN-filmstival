@@ -24,13 +24,17 @@ class MovieItem extends React.Component{
 
   }
 
-    openReviews(){
+  openReviews(){
       this.setState({showReviews: !this.state.showReviews})
-    }
+  }
 
+
+  handleShowMovie(event) {
+    event.preventDefault();
+    this.props.showMovie(this.props.data)
+  }
 
   render(){
-
     let data = this.props.data
     return(
 
@@ -41,6 +45,8 @@ class MovieItem extends React.Component{
           <ReviewsList reviewList={data.reviews} />
           : null
         }
+        <a href="" onClick={this.handleShowMovie.bind(this)}>Show more...</a>
+
         { this.props.currentUser ?
           <div>
            <Vote voteObject={this.props.data} currentUser={this.props.currentUser}/>

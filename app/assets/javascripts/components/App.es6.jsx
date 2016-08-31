@@ -12,6 +12,7 @@ class App extends React.Component{
     this.updateSelected = this.updateSelected.bind(this)
     this.handleSelectCategory = this.handleSelectCategory.bind(this)
     this.updateReviews = this.updateReviews.bind(this);
+    this.showMovie = this.showMovie.bind(this);
   }
 
 
@@ -41,6 +42,10 @@ class App extends React.Component{
     this.setState({reviews: list.reviews})
   }
 
+  showMovie(movie) {
+    this.setState({selectedList: "Movie", selectedFilm: movie})
+  }
+
 
   render(){
     var selectedList;
@@ -50,8 +55,11 @@ class App extends React.Component{
     else if (this.state.selectedList === "Reviews") {
       selectedList = <ReviewsList onUpdate={this.updateReviews} reviewList={this.state.reviews} />
     }
+    else if (this.state.selectedList === "Movie") {
+      selectedList = <Movie movie={this.state.selectedFilm} />
+    }
     else {
-      selectedList = <MoviesList filmList={this.state.films} category={this.state.selectedCategory} currentUser={this.props.currentUser}/>
+      selectedList = <MoviesList filmList={this.state.films} category={this.state.selectedCategory} currentUser={this.props.currentUser} showMovie={this.showMovie}/>
     }
 
     return(

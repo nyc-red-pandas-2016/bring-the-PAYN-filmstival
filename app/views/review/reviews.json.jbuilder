@@ -1,4 +1,6 @@
 json.reviews @reviews do |review|
+  json.type "review"
+  json.id review.id
   json.review review
   json.reviewer review.reviewer
   json.votes review.votes.sum(:point_value)
