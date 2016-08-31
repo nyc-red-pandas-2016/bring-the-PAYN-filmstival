@@ -17,8 +17,12 @@ selectByCategory(film){
       }
     }
 
+    // var filmList = this.props.filmList.filter(this.props.selectedCategory)
+
+
     return(
         <div className="moviesList">
+
           {
             filmList.map((film, i) => {
               return( <MovieItem currentUser={this.props.currentUser} data={film} key={i} /> )

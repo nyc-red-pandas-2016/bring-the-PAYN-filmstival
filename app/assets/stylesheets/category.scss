@@ -1,3 +1,57 @@
 // Place all the styles related to the Category controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.featuredFilm{
+  border: 2px solid black;
+  height: 280px
+
+}
+
+.categoriesBar {
+  border-top: 10px solid black;
+  width: 82%;
+  height: 30px;
+  margin: auto;
+  // margin-top: 38%;
+}
+.moviesList {
+  border-right: 10px solid black;
+  border-left: 10px solid black;
+  border-bottom: 10px solid black;
+
+  width: 80%;
+  margin: auto;
+  // margin-top: 40%;
+  height: 500px;
+  overflow: scroll;
+ }
+
+.theMovie{
+  vertical-align: top;
+  border: 2px solid black;
+  width: 85%;
+  display: inline-block;
+  margin: 10px;
+  margin-left: 30px;
+  border-radius: 10px;
+  padding: 15px;
+
+    h4 {
+      border: 2px solid orange;
+      display: inline;
+      width: 20%;
+      float: left;
+      margin: 0;
+      margin-right: 15px;
+    }
+    p {
+      width: 70%;
+      float: left;
+      margin: 0px;
+    }
+}
+
+
+
+// I am going to need to have all the info and just display and hide things based on what button is clicked.
