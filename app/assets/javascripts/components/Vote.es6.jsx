@@ -8,38 +8,35 @@ class Vote extends React.Component {
   voteUp(event){
     event.preventDefault();
     var formData = $('#voteForm').serialize();
-    debugger;
     $.ajax({
       url: '/votes',
       method: "Post",
       data: formData
-    }).done((response) => {
-      debugger;
-
-      this.props.onChange(response);
-      $('#voteTally').val();
     })
+
+    var newVotes = parseInt($('#voteTally').html()) + 1
+
+    $('#voteTally').html(newVotes);
+
   }
 
     render() {
       return (
-        // { this.props.voteObject.film.description ?
+        <div>
+          <div className="voteDiv">
+            <p><span id="voteTally">{this.props.voteObject.votes.length}</span> votes</p>
+          </div>
+        <div>
            <form id="voteForm" onSubmit={this.voteUp}>
            <input type="submit" value="&uarr;"/>
            <input type="hidden" value="{currentUser.id}"/>
-           <input type="hidden" name = 'vote[votable_type]' value={this.props.voteObject.type}/>
+           <input type="hidden" name = 'vote[votable_type]' value="Film"/>
            <input type="hidden" name = 'vote[point_value]' value={1} />
-           <input type="hidden" name = 'vote[votable_id]' value={this.props.voteObject.id} />
+           <input type="hidden" name = 'vote[votable_id]' value={this.props.voteObject.film.id} />
            <input type="hidden" name = 'vote[user_id]' value={this.props.currentUser.id} />
            </form>
-        //    :
-        //    <form id="voteForm" onSubmit={this.voteUp}>
-        //    <input type="submit" value="&uarr;"/>
-        //    <input type="hidden" value="{currentUser.id}"/>
-        //    <input type="hidden" name = 'vote[votable_type]' value={this.props.voteObject.film}/>
-        //    <input type="hidden" name = 'vote[point_value]' value={1} />
-        //    </form>
-        //  }
+          </div>
+        </div>
        )
     }
  }

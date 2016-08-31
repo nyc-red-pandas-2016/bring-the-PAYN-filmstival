@@ -13,7 +13,7 @@ class MovieItem extends React.Component{
           <p>{data.film.description}</p>
         { this.props.currentUser ?
           <div>
-           <div>{data.votes.length} votes<Vote voteObject={this.props.data} currentUser={this.props.currentUser}/></div>
+           <Vote voteObject={this.props.data} currentUser={this.props.currentUser}/>
           </div>
           :
           <div>
