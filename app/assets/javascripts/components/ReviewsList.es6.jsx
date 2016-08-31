@@ -5,8 +5,7 @@ class ReviewsList extends React.Component {
     .then((response) => {
       return response.json();
     }).then((reviews) => {
-      debugger;
-      this.props.onUpdate(reviews));
+      this.props.onUpdate(reviews);
     });
   }
 

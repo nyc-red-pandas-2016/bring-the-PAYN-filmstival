@@ -6,7 +6,7 @@ class Comment extends React.Component {
 
   render() {
     return (
-
+      <li></li>
       // <li><{this.props.data}/></li>
       //Vote here
       // Close Return
