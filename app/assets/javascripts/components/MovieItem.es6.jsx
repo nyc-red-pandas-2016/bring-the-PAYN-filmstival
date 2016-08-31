@@ -50,6 +50,7 @@ class MovieItem extends React.Component{
             <p id="voteTally">{this.props.data.votes.length} votes</p>
           </div>
         }
-    )
+        </div>
+    );
   }
 }
