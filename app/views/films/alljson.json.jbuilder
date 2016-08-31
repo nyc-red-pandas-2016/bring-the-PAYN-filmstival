@@ -8,10 +8,14 @@ json.films @films do |film|
   end
   json.reviews film.reviews do |review|
     json.review review
-    json.votes review.votes
-    json.reviewcomments review.comments do |comment|
+    json.reviewer review.reviewer
+    json.votes review.votes.sum(:point_value)
+    json.film review.film
+    json.category review.film.categories
+    json.comments review.comments do |comment|
       json.comment comment
-      json.votes comment.votes
+      json.votes comment.votes.sum(:point_value)
+      json.user  comment.user
     end
   end
 end

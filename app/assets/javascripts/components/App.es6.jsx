@@ -14,10 +14,17 @@ class App extends React.Component{
     this.updateReviews = this.updateReviews.bind(this);
   }
 
+
+
+  getFeaturedFilm(films){
+    return (films[~~(Math.random() * films.length)])
+  }
+
   componentDidMount(){
     fetch("/films")
     .then((response)=> response.json())
-    .then((jsonresponse) => this.setState({films: jsonresponse.films , allCategories: jsonresponse.category}))
+    .then((jsonresponse) => this.setState({films: jsonresponse.films , allCategories: jsonresponse.category, featured: this.getFeaturedFilm(jsonresponse.films)}))
+
   }
 
 
@@ -54,14 +61,12 @@ class App extends React.Component{
            src="/assets/logo-cell.png"/></a>
         </h2> */}
         <NavBar currentUser={this.props.currentUser}/>
-        {/* <Featured /> */}
+        <Featured featured={this.state.featured}/>
         <CategoriesBar categories={this.state.allCategories} onUpdateCategory={this.handleSelectCategory} onUpdateSelect={this.updateSelected}/>
 
         {selectedList}
 
-        <div className="featuredFilm">
-          <p> Featured Film</p>
-        </div>
+
       </div>
     )
   }
