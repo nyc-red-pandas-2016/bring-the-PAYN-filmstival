@@ -1,7 +1,7 @@
 json.reviews @reviews do |review|
   json.review review
   json.reviewer review.reviewer
-  json.votes review.votes
+  json.votes review.votes.sum(:point_value)
   json.film review.film
   json.category review.film.categories
   json.comments review.comments do |comment|

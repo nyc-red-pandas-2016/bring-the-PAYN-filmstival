@@ -30,8 +30,8 @@ class App extends React.Component{
 
   }
 
-  updateReviews(reviews) {
-    this.setState({reviews: reviews})
+  updateReviews(list) {
+    this.setState({reviews: list.reviews})
   }
 
 

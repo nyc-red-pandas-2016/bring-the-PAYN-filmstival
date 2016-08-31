@@ -1,17 +1,16 @@
 class CommentList extends React.Component {
-// class CommentList extends React.Component {
-//
-//   componentDidMount() {
-//
-//   }
-//
-//   render() {
-//     return (
-//
-//       <li>><Comment {this.props.data}/></li>
-//       // Close Return
-//     );
-//     // Close Render
-//   }
-// // Close Component
+
+  render() {
+    return (
+      <div>
+      {
+        this.props.commentList.map((comment, i) => {
+          return( <Comment data={comment} key={i} /> )
+        })
+      }
+      </div>
+    );
+    // Close Render
+  }
+// Close Component
 }
