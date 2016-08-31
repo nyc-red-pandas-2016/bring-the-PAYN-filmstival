@@ -3,8 +3,6 @@ class MovieItem extends React.Component{
     super();
   }
 
-
-
   render(){
     let data = this.props.data
 
