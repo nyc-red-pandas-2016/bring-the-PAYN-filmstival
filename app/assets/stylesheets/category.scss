@@ -2,30 +2,71 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.appMain{
+
+}
+
 .featuredFilm{
-  border: 2px solid black;
-  height: 280px
-
-}
-
-.categoriesBar {
-  border-top: 10px solid black;
-  width: 82%;
-  height: 30px;
+  border: 1px solid grey;
+  height: 280px;
+  margin-bottom: 10px;
+  background-image: url("http://cache2.allpostersimages.com/p/MED/56/5666/KV3UG00Z/posters/.jpg");
+  background-size: 100%;
+  width: 1000px;
   margin: auto;
-  // margin-top: 38%;
+  margin-bottom:10px;
 }
-.moviesList {
-  border-right: 10px solid black;
-  border-left: 10px solid black;
-  border-bottom: 10px solid black;
 
-  width: 80%;
+
+.moviesList {
+  border-right: 10px solid #333;
+  border-left: 10px solid #333;
+  border-bottom: 10px solid #333;
+
+  width: 850px;
   margin: auto;
   // margin-top: 40%;
-  height: 500px;
+  height: 485px;
   overflow: scroll;
  }
+
+
+ .theReview {
+   border: 2px solid black;
+   width: 85%;
+   display: inline-block;
+   margin: 10px;
+   margin-left: 30px;
+   border-radius: 10px;
+   padding: 15px;
+   list-style: none;
+ }
+
+.theVote{
+ display: inline-block;
+ border: 2px solid black;
+ margin-right: 120px;
+ margin-left: 15px;
+
+}
+
+.theUsername{
+  display: inline-block;
+  border: 2px solid black;
+  margin-left: 120px;
+}
+
+.theTitle{
+  display: inline-block;
+  border: 2px solid black;
+}
+
+.theText{
+  width: 80%;
+  margin: auto;
+  margin-top: 5px;
+}
+
 
 .theMovie{
   vertical-align: top;
@@ -44,6 +85,8 @@
       float: left;
       margin: 0;
       margin-right: 15px;
+      border-radius: 5px;
+      padding: 5px;
     }
     p {
       width: 70%;
@@ -52,6 +95,28 @@
     }
 }
 
+.categoriesBar {
+  border-top: 10px solid #333;
+  border-right: 10px solid #333;
+  border-left: 10px solid #333;
+  width: 850px;
+  margin: auto;
 
 
-// I am going to need to have all the info and just display and hide things based on what button is clicked.
+}
+.categoryButtons{
+  display: inline-block;
+}
+
+.selectBox{
+  display: inline-block;
+}
+
+button {
+  height: 40px;
+  margin-right: 3px;
+}
+
+button:hover{
+  border: 2px solid orange;
+}

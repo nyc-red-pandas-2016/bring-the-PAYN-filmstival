@@ -11,7 +11,7 @@ class ReviewsList extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="moviesList">
       {
         this.props.reviewList.map((review, i) => {
           return( <Review data={review} key={i} /> )

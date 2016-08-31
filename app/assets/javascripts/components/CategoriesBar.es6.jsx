@@ -24,7 +24,6 @@ this.props.onUpdateSelect(event.target.value)
             <select ref="selectBox" onChange={this.handleSelectBox.bind(this)}>
                <option value="Movies">Movies</option>
                <option value="Reviews">Reviews</option>
-               <option value="Events">Show Times/Events</option>
             </select>
 
         </div>
