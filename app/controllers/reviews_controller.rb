@@ -1,8 +1,11 @@
 class ReviewsController < ApplicationController
 
   def index
-    @reviews = Comment.all
-    render :json => @reviews
+    @reviews =  Review.all
+    # binding.pry
+    # render json: @reviews
+
+    render 'review/reviews.json.jbuilder'
   end
 
   def new

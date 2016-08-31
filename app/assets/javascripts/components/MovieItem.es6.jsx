@@ -29,23 +29,13 @@ class MovieItem extends React.Component{
 
           <h4>{data.film.title}</h4>
           <p>{data.film.description}</p>
-<<<<<<< 0288cf68fe39ed9d872084359e6b2359c1f87d53
-=======
-          {/* {
-            data.reviews.map((review, i) => <Reviews key={i} data={review} />)
-          } */}
-
-          <h4>{this.props.data.title}</h4>
-          <p>{this.props.data.description}</p>
-      </div>
->>>>>>> add sort select box
-
+        {/* <ReviewsList {this.props.data.reviews} /> */}
         { this.props.currentUser ?
           <div>
-            <p id="voteTally">{this.props.data.votes.length} votes</p>
-            <form id="voteForm" onChange={this.voteMovie.bind.this}>
-              <input id="voteButton" type="Submit" value="&uarr;"/>
-            </form>
+          <p id="voteTally">{this.props.data.votes.length} votes</p>
+          <form id="voteForm" onChange={this.voteMovie.bind.this}>
+          <input id="voteButton" type="Submit" value="&uarr;"/>
+          </form>
           </div>
           :
           <p id="voteTally">{this.props.data.votes.length} votes</p>
