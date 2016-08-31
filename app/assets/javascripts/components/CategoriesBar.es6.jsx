@@ -12,19 +12,11 @@ this.props.onUpdateSelect(event.target.value)
   render () {
     return(
       <div className="categoriesBar">
-<<<<<<< 0288cf68fe39ed9d872084359e6b2359c1f87d53
-      <button value="" onClick={this.handleSelectCategory.bind(this)}>All</button>
-      {
-        this.props.categories.map((category, i) => {
-        return(<button value={category.name} key={i} onClick={this.handleSelectCategory.bind(this)}>{category.name}</button>)
-        })
-      }
-=======
         <div className="categoryButtons">
           <button value="" onClick={this.handleCategory.bind(this)}>All</button>
           {
             this.props.categories.map((category, i) => {
-            return(<button value={category.name} onClick={this.handleCategory.bind(this)}>{category.name}</button>)
+            return(<button key={i} value={category.name} onClick={this.handleCategory.bind(this)}>{category.name}</button>)
             })
           }
         </div>
@@ -36,7 +28,6 @@ this.props.onUpdateSelect(event.target.value)
             </select>
 
         </div>
->>>>>>> add sort select box
       </div>
     )
   }

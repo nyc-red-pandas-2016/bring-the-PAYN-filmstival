@@ -3,7 +3,6 @@ class App extends React.Component{
     super();
     this.state = {
       films: [],
-      // dummyfilm: []
       selectedFilm: "",
       reviews: [],
       selectedCategory: "",
@@ -12,6 +11,7 @@ class App extends React.Component{
     }
     this.updateSelected = this.updateSelected.bind(this)
     this.handleSelectCategory = this.handleSelectCategory.bind(this)
+    this.updateReviews = this.updateReviews.bind(this);
   }
 
   componentDidMount(){
@@ -27,7 +27,13 @@ class App extends React.Component{
 
   updateSelected(selection){
     this.setState({selectedList: selection})
+
   }
+
+  updateReviews(reviews) {
+    this.setState({reviews: reviews})
+  }
+
 
   render(){
     var selectedList;
@@ -35,7 +41,7 @@ class App extends React.Component{
       selectedList =  'Event'  //<Events />
     }
     else if (this.state.selectedList === "Reviews") {
-      selectedList = 'review' // <ReviewList />
+      selectedList = <ReviewsList onUpdate={this.updateReviews} reviewList={this.state.reviews} />
     }
     else {
       selectedList = <MoviesList filmList={this.state.films} category={this.state.selectedCategory} currentUser={this.props.currentUser}/>
