@@ -8,16 +8,23 @@ class App extends React.Component{
       selectedCategory: "",
       selectedList: "Movies",
       allCategories: []
+      featured: ""
     }
     this.updateSelected = this.updateSelected.bind(this)
     this.handleSelectCategory = this.handleSelectCategory.bind(this)
     this.updateReviews = this.updateReviews.bind(this);
   }
 
+
+
+  getFeaturedFilm(){
+
+  }
+
   componentDidMount(){
     fetch("/films")
     .then((response)=> response.json())
-    .then((jsonresponse) => this.setState({films: jsonresponse.films , allCategories: jsonresponse.category}))
+    .then((jsonresponse) => this.setState({films: jsonresponse.films , allCategories: jsonresponse.category, featured}))
   }
 
 
