@@ -56,7 +56,12 @@ class App extends React.Component{
         <NavBar currentUser={this.props.currentUser}/>
         {/* <Featured /> */}
         <CategoriesBar categories={this.state.allCategories} onUpdateCategory={this.handleSelectCategory} onUpdateSelect={this.updateSelected}/>
+
         {selectedList}
+
+        <div className="featuredFilm">
+          <p> Featured Film</p>
+        </div>
       </div>
     )
   }
