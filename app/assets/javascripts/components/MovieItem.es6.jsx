@@ -6,19 +6,15 @@ class MovieItem extends React.Component{
   voteMovie(event){
     event.preventDefault();
     this.props.voteMovie()
-    debugger;
-
     $.ajax({
       url: '/votes',
       method: "Post",
       data: {
-
       }
     }).done((response) => {
       this.props.onChange(response);
       $('#voteTally').val();
     })
-
   }
 
   render(){
@@ -29,7 +25,7 @@ class MovieItem extends React.Component{
 
           <h4>{data.film.title}</h4>
           <p>{data.film.description}</p>
-        {/* <ReviewsList {this.props.data.reviews} /> */}
+
         { this.props.currentUser ?
           <div>
           <p id="voteTally">{this.props.data.votes.length} votes</p>
@@ -38,7 +34,9 @@ class MovieItem extends React.Component{
           </form>
           </div>
           :
-          <p id="voteTally">{this.props.data.votes.length} votes</p>
+          <div>
+            <p id="voteTally">{this.props.data.votes.length} votes</p>
+          </div>
         }
 
       </div>

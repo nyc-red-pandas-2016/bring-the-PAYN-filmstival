@@ -1,4 +1,5 @@
 class ReviewsList extends React.Component {
+<<<<<<< 9eaab2d69afa723353b14e0d15afbd0587e22265
 
   componentDidMount(){
     fetch('/reviews')
