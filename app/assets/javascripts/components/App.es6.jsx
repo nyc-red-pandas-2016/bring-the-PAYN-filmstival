@@ -7,8 +7,10 @@ class App extends React.Component{
       selectedFilm: "",
       reviews: [],
       selectedCategory: "",
+      selectedList: "Movies",
       allCategories: []
     }
+    this.updateSelected = this.updateSelected.bind(this)
     this.handleSelectCategory = this.handleSelectCategory.bind(this)
   }
 
@@ -23,17 +25,21 @@ class App extends React.Component{
       this.setState({selectedCategory: newCategory})
   }
 
+  updateSelected(selection){
+    this.setState({selectedList: selection})
+  }
+
   render(){
-    // var selectedList;
-    // if (sortItem === "Events") {
-    //   selectedList = <Events />
-    // }
-    // else if (sortItem === "Reviews") {
-    //   selectedList = <Reviews />
-    // }
-    // else {
-    //   selectedList = <MoviesList filmList={this.state.films} category={this.state.selectedCategory}/>
-    // }
+    var selectedList;
+    if (this.state.selectedList === "Events") {
+      selectedList =  'Event'  //<Events />
+    }
+    else if (this.state.selectedList === "Reviews") {
+      selectedList = 'review' // <ReviewList />
+    }
+    else {
+      selectedList = <MoviesList filmList={this.state.films} category={this.state.selectedCategory} currentUser={this.props.currentUser}/>
+    }
 
     return(
       <div className="appMain">
@@ -43,9 +49,8 @@ class App extends React.Component{
         </h2> */}
         <NavBar currentUser={this.props.currentUser}/>
         {/* <Featured /> */}
-        <CategoriesBar categories={this.state.allCategories} onUpdate={this.handleSelectCategory}/>
-        <MoviesList filmList={this.state.films} category={this.state.selectedCategory} currentUser={this.props.currentUser}/>
-        {/* {selectedList} */}
+        <CategoriesBar categories={this.state.allCategories} onUpdateCategory={this.handleSelectCategory} onUpdateSelect={this.updateSelected}/>
+        {selectedList}
       </div>
     )
   }
