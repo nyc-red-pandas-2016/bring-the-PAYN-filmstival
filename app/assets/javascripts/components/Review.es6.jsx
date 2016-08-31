@@ -5,10 +5,10 @@ class Review extends React.Component {
     return (
       <div>
         <ul>
-          <li>{this.props.data.reviewer.username}</li>
-          <li>{this.props.data.film.title}</li>
+          <li>User: {this.props.data.reviewer.username}</li>
+          <li>Title: {this.props.data.film.title}</li>
           <li>{this.props.data.votes} votes</li>
-          <li>{this.props.data.review.text}</li>
+          <li>Review: {this.props.data.review.text}</li>
         </ul>
         <CommentList commentList={this.props.data.comments}/>
       </div>
